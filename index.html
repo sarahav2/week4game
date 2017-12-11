@@ -1,12 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Crystal Collector</title>
+		<!-- Bring in our bootstrap stylesheet -->
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  		<!-- my css stylesheet -->
+  		<link href="https://fonts.googleapis.com/css?family=Iceland" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">	
+
+	</head>
+	
+	<body>
+
+	 <div class="container">
+	 	<div class="row"><!-- top title row -->
+	 		<div class="col-md-12" id="titleBar">Crystal Collector</div>
+	 	</div><!-- end top title row -->
+
+	 	<div class="row"><!-- main content row -->
+
+	 		<div class="col-md-3" id="instPanel"><!-- start inst panel col -->
+	 			<div id="inst"><!-- start inst div -->
+	 				<p>Every round a random number will be displayed in the Target Score section.<br><br>
+	 				Clicking on the crystals adds points to your score. Each crystal is worth a different point value.<br><br>
+	 				The object of the game is to increase your score until you match the Target Score. However, you lose the round if you go over the Target Score.<br><br>
+	 				The value of each crystal is hidden from you but remains the same the entire round.<br><br>
+	 				All crystal values and the Target Score change randomly at the beginning of every round.<br><br>
+	 				Win 5 rounds to win the game. Lose 5 rounds and it's GAME OVER.<br>
+					<br>
+	 				
+	 				</p><!-- end instructions -->
+	 			</div><!-- end inst div -->
+	 			<button id="startBtn">START</button><!-- click to start game -->
+	 		</div><!-- end inst panel col -->
+
+	 		<div class="col-md-9" id="gamePanel"><!-- start game panel col -->
+
+	 			<div class="row"><!-- start scores row -->
+	 				<div class="col-md-3">
+	 					<h1>Target Score</h1><br>
+	 					<h1 id="targetScore">0</h1><!-- push random target score here -->
+	 				</div><!-- end target score col -->
+	 				<div class="col-md-2">
+	 					<p class="scoreSpacer"></p><!-- use class to set score apcer width -->
+	 				</div><!-- end score spacer col -->
+	 				<div class="col-md-3">
+	 					<h1>Your Score</h1><br>
+	 					<h1 id="yourScore">0</h1><!-- push current score to this id -->
+	 				</div><!-- end your score col -->
+	 				<div class="col-md-2">
+	 					<p class="scoreSpacer"></p><!-- use class to set score apcer width -->
+	 				</div><!-- end score spacer col -->
+	 				<div class="col-md-2" id="winsLoss">
+	 					<h1>WINS</h1><h1 id="wins">0</h1><!-- push wins to this id -->
+	 					<hr>
+	 					<h1>LOSSES</h1><h1 id="losses">0</h1><!-- push losses to this id -->
+	 				</div><!-- end wins loss col -->
+	 			</div><!-- end scores row -->
+
+	 			<div class="row gemRow"><!-- start crystals row -->
+	 				<div class="col-md-3 gemBox" ><!-- start amethyst col -->
+	 					<img class="gem" id="amethyst" src="assets/images/amethyst.jpg"><!-- amethyst img -->
+	 				</div><!-- end amethyst col -->
+
+	 				<div class="col-md-3 gemBox" ><!-- start blue col -->
+	 					<img class="gem" id="blue" src="assets/images/blue.jpg"><!-- blue crystal image -->
+	 				</div><!-- end blue col -->
+
+	 				<div class="col-md-3 gemBox" ><!-- start flourite col -->
+	 					<img class="gem" id="flourite" src="assets/images/flourite.png"><!-- flourite image -->
+	 				</div><!-- end flourite col -->
+
+	 				<div class="col-md-3 gemBox" ><!-- start rare col -->
+	 					<img class="gem" id="rare" src="assets/images/rare.png"><!-- rare crystal image -->
+	 				</div><!-- end rare col -->
+
+	 			</div><!-- end crystals row -->
+
+	 		</div><!-- end game panel col -->
+
+	 	</div><!-- end main content row -->
+	
+
+	 </div><!-- end bootstrap container div -->
+		
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!-- link game.js with logic -->
+		<script src="assets/javascript/game.js"></script>
+	</body>
 </html>
